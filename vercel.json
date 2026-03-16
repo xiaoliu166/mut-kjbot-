@@ -1,7 +1,5 @@
 {
-  "build": {
-    "env": {
-      "ADMIN_DIR": "admin"
-    }
-  }
+  "installCommand": "cd admin && npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
