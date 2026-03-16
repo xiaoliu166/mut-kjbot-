@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd admin && npm install && npm run build",
-  "outputDirectory": "admin/dist",
-  "installCommand": "cd admin && npm install",
-  "rootDirectory": "admin"
+  "build": {
+    "command": "cd admin && npm install && npm run build",
+    "output": "admin/dist"
+  }
 }
