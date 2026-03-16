@@ -1,0 +1,10 @@
+{
+  "name": "mut-kjbot-admin",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd admin && npm install",
+    "build": "cd admin && npm run build"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

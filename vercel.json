@@ -1,5 +1,5 @@
 {
-  "installCommand": "cd admin && npm install",
-  "buildCommand": "npm run build --prefix admin",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
   "outputDirectory": "admin/dist"
 }
