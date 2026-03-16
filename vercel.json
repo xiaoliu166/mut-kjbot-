@@ -1,5 +1,4 @@
 {
-  "installCommand": "cd admin && npm install && npm install vite",
-  "buildCommand": "cd admin && npx vite build",
-  "outputDirectory": "admin/dist"
+  "buildCommand": "echo 'no build needed'",
+  "outputDirectory": "."
 }
