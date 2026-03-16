@@ -1,0 +1,47 @@
+{
+  "user_f8b47c43": {
+    "id": "user_f8b47c43",
+    "username": "管理员",
+    "email": "admin@test.com",
+    "tenant_id": "tenant_8d66453a",
+    "role": "admin",
+    "created_at": "2026-03-16T16:50:39.345040",
+    "last_login": null
+  },
+  "user_c540a61d": {
+    "id": "user_c540a61d",
+    "username": "编辑",
+    "email": "editor@test.com",
+    "tenant_id": "tenant_8d66453a",
+    "role": "editor",
+    "created_at": "2026-03-16T16:50:39.345473",
+    "last_login": null
+  },
+  "user_59a0704b": {
+    "id": "user_59a0704b",
+    "username": "查看",
+    "email": "viewer@test.com",
+    "tenant_id": "tenant_8d66453a",
+    "role": "viewer",
+    "created_at": "2026-03-16T16:50:39.346071",
+    "last_login": null
+  },
+  "user_dafe8cf5": {
+    "id": "user_dafe8cf5",
+    "username": "Test",
+    "email": "t@t.com",
+    "tenant_id": "tenant_94bef4c4",
+    "role": "admin",
+    "created_at": "2026-03-16T16:52:08.673904",
+    "last_login": null
+  },
+  "user_f08efa88": {
+    "id": "user_f08efa88",
+    "username": "Test",
+    "email": "t@t.com",
+    "tenant_id": "tenant_16be4a7a",
+    "role": "admin",
+    "created_at": "2026-03-16T17:24:39.014824",
+    "last_login": null
+  }
+}

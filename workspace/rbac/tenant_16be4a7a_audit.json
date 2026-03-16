@@ -1,0 +1,20 @@
+[
+  {
+    "id": "35fe647f-efe4-4ba3-b058-86104855c201",
+    "timestamp": "2026-03-16T17:24:39.014641",
+    "user_id": "owner",
+    "action": "create_tenant",
+    "resource": "tenant_16be4a7a",
+    "result": "success",
+    "details": {}
+  },
+  {
+    "id": "661fb661-7fd4-4bad-a636-fdba0e91fe11",
+    "timestamp": "2026-03-16T17:24:39.015220",
+    "user_id": "user_f08efa88",
+    "action": "create_user",
+    "resource": "user_f08efa88",
+    "result": "success",
+    "details": {}
+  }
+]

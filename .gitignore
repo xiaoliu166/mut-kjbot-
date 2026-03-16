@@ -11,12 +11,12 @@ ENV/
 dist/
 build/
 
-# Node
+# Node (但保留 package.json)
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.DS_Store
+!.gitkeep
 
 # IDE
 .vscode/
@@ -27,7 +27,6 @@ yarn-error.log*
 # 数据
 workspace/
 skills/store/
-*.json
 
 # 环境
 .env

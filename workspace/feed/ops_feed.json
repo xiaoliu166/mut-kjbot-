@@ -1,0 +1,31 @@
+[
+  {
+    "id": "msg_1773650753963_2",
+    "from": "ads",
+    "to": "ops",
+    "type": "notify",
+    "content": {
+      "action": "notify",
+      "notification": {
+        "status": "ok"
+      }
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650753963_2",
+    "timestamp": "2026-03-16T16:45:53.963585",
+    "status": "pending"
+  },
+  {
+    "id": "msg_1773650753964_4",
+    "from": "selectors",
+    "to": "ops",
+    "type": "broadcast",
+    "content": {
+      "type": "news"
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650753964_4",
+    "timestamp": "2026-03-16T16:45:53.964457",
+    "status": "pending"
+  }
+]

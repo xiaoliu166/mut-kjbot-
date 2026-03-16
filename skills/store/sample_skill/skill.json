@@ -1,0 +1,13 @@
+{
+  "id": "sample_skill",
+  "name": "示例技能",
+  "version": "1.0.0",
+  "description": "这是一个示例技能，用于演示如何创建Skill",
+  "author": "mut-kjbot",
+  "tags": [
+    "example",
+    "demo"
+  ],
+  "dependencies": [],
+  "entry_point": "main"
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "msg_1773650753965_7",
+    "from": "selectors",
+    "to": "all",
+    "type": "broadcast",
+    "content": {
+      "type": "news"
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650753965_7",
+    "timestamp": "2026-03-16T16:45:53.965297",
+    "status": "pending"
+  }
+]

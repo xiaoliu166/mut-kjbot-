@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1a926ff0-2971-4013-be0a-361531d1a0e1",
+    "timestamp": "2026-03-16T16:52:08.673735",
+    "user_id": "owner",
+    "action": "create_tenant",
+    "resource": "tenant_94bef4c4",
+    "result": "success",
+    "details": {}
+  },
+  {
+    "id": "6a989e27-b77f-4b41-81bf-12755eefa1ce",
+    "timestamp": "2026-03-16T16:52:08.675379",
+    "user_id": "user_dafe8cf5",
+    "action": "create_user",
+    "resource": "user_dafe8cf5",
+    "result": "success",
+    "details": {}
+  }
+]

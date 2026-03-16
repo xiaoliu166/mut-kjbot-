@@ -1,0 +1,38 @@
+[
+  {
+    "id": "94a0c042-4a8f-49cc-a18d-8b24eab548ee",
+    "timestamp": "2026-03-16T16:50:39.344864",
+    "user_id": "admin",
+    "action": "create_tenant",
+    "resource": "tenant_8d66453a",
+    "result": "success",
+    "details": {}
+  },
+  {
+    "id": "3929f7c1-b790-4531-bab5-8954d035ff0c",
+    "timestamp": "2026-03-16T16:50:39.345299",
+    "user_id": "user_f8b47c43",
+    "action": "create_user",
+    "resource": "user_f8b47c43",
+    "result": "success",
+    "details": {}
+  },
+  {
+    "id": "fc12ee3b-cfb9-431c-8958-7b0a6294d71b",
+    "timestamp": "2026-03-16T16:50:39.345867",
+    "user_id": "user_c540a61d",
+    "action": "create_user",
+    "resource": "user_c540a61d",
+    "result": "success",
+    "details": {}
+  },
+  {
+    "id": "6f8ef83e-183b-4d7d-8da6-5ef4249af353",
+    "timestamp": "2026-03-16T16:50:39.346963",
+    "user_id": "user_59a0704b",
+    "action": "create_user",
+    "resource": "user_59a0704b",
+    "result": "success",
+    "details": {}
+  }
+]

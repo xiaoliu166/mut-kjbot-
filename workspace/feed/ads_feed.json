@@ -1,0 +1,65 @@
+[
+  {
+    "id": "msg_1773650181424_1",
+    "from": "selectors",
+    "to": "ads",
+    "type": "task",
+    "content": {
+      "action": "task",
+      "task": {
+        "product": "蓝牙耳机",
+        "action": "create_ad"
+      }
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650181424_1",
+    "timestamp": "2026-03-16T16:36:21.424522",
+    "status": "pending"
+  },
+  {
+    "id": "msg_1773650188020_1",
+    "from": "selectors",
+    "to": "ads",
+    "type": "task",
+    "content": {
+      "action": "task",
+      "task": {
+        "product": "蓝牙耳机",
+        "action": "create_ad"
+      }
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650188020_1",
+    "timestamp": "2026-03-16T16:36:28.020603",
+    "status": "pending"
+  },
+  {
+    "id": "msg_1773650753963_1",
+    "from": "selectors",
+    "to": "ads",
+    "type": "task",
+    "content": {
+      "action": "task",
+      "task": {
+        "product": "蓝牙耳机"
+      }
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650753963_1",
+    "timestamp": "2026-03-16T16:45:53.963077",
+    "status": "pending"
+  },
+  {
+    "id": "msg_1773650753964_5",
+    "from": "selectors",
+    "to": "ads",
+    "type": "broadcast",
+    "content": {
+      "type": "news"
+    },
+    "priority": 2,
+    "correlation_id": "msg_1773650753964_5",
+    "timestamp": "2026-03-16T16:45:53.964733",
+    "status": "pending"
+  }
+]
