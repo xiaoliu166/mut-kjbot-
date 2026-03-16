@@ -1,0 +1,22 @@
+# mut-kjbot 依赖
+
+# 核心框架
+langgraph>=0.2.0
+langchain>=0.3.0
+langchain-openai>=0.2.0
+
+# AutoGen (微软多Agent框架)
+pyautogen>=0.2.0
+
+# 环境变量
+python-dotenv>=1.0.0
+
+# 触发器系统
+croniter>=2.0.0
+schedule>=1.2.0
+flask>=3.0.0
+werkzeug>=3.0.0
+requests>=2.31.0
+
+# 可视化 (可选)
+# ipython>=8.0.0
