@@ -1,4 +1,7 @@
 {
-  "buildCommand": "npm install --prefix admin && npm run build --prefix admin",
-  "outputDirectory": "admin/dist"
+  "build": {
+    "env": {
+      "ADMIN_DIR": "admin"
+    }
+  }
 }
