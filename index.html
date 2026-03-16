@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +7,235 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 min-h-screen">
-  <div id="root" class="p-6">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-2xl font-bold text-gray-900 mb-6">Dashboard</h1>
-      <div class="grid grid-cols-4 gap-4 mb-6">
-        <div class="bg-white p-5 rounded-xl border">
-          <div class="text-2xl font-bold">4</div>
-          <div class="text-gray-500 text-sm">Total Bots</div>
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-white border-r border-gray-200 p-4">
+    <div class="flex items-center gap-2 mb-8">
+      <div class="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center">
+        <span class="text-white font-bold">🤖</span>
+      </div>
+      <span class="font-semibold text-gray-900">mut-kjbot</span>
+    </div>
+    <nav class="space-y-1">
+      <a href="#" onclick="showPage('dashboard')" id="nav-dashboard" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium bg-gray-900 text-white">
+        📊 Dashboard
+      </a>
+      <a href="#" onclick="showPage('bots')" id="nav-bots" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        🤖 Bot管理
+      </a>
+      <a href="#" onclick="showPage('skills')" id="nav-skills" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        🔧 Skills
+      </a>
+      <a href="#" onclick="showPage('triggers')" id="nav-triggers" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        ⏰ 触发器
+      </a>
+      <a href="#" onclick="showPage('channels')" id="nav-channels" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        📡 渠道集成
+      </a>
+      <a href="#" onclick="showPage('models')" id="nav-models" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        🧠 模型配置
+      </a>
+      <a href="#" onclick="showPage('reports')" id="nav-reports" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        📈 数据报表
+      </a>
+      <a href="#" onclick="showPage('users')" id="nav-users" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+        👥 用户权限
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-64 p-6">
+    <div class="max-w-6xl mx-auto" id="content">
+      <!-- Dashboard -->
+      <div id="page-dashboard">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">Dashboard</h1>
+        <div class="grid grid-cols-4 gap-4 mb-6">
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="text-2xl font-bold">4</div>
+            <div class="text-gray-500 text-sm">Total Bots</div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="text-2xl font-bold">8</div>
+            <div class="text-gray-500 text-sm">Skills</div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="text-2xl font-bold">156</div>
+            <div class="text-gray-500 text-sm">Messages Today</div>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="text-2xl font-bold">4</div>
+            <div class="text-gray-500 text-sm">Active Agents</div>
+          </div>
         </div>
-        <div class="bg-white p-5 rounded-xl border">
-          <div class="text-2xl font-bold">8</div>
-          <div class="text-gray-500 text-sm">Skills</div>
-        </div>
-        <div class="bg-white p-5 rounded-xl border">
-          <div class="text-2xl font-bold">156</div>
-          <div class="text-gray-500 text-sm">Messages</div>
-        </div>
-        <div class="bg-white p-5 rounded-xl border">
-          <div class="text-2xl font-bold">4</div>
-          <div class="text-gray-500 text-sm">Active</div>
+        <div class="bg-white rounded-xl border">
+          <div class="p-4 border-b font-semibold">Bot List</div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><span class="font-medium">选品Bot</span><span class="text-gray-500 text-sm ml-2">市场分析专家</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><span class="font-medium">投放Bot</span><span class="text-gray-500 text-sm ml-2">广告投放专家</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><span class="font-medium">运营Bot</span><span class="text-gray-500 text-sm ml-2">Listing优化专家</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <div><span class="font-medium">合规Bot</span><span class="text-gray-500 text-sm ml-2">合规审查专家</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
         </div>
       </div>
-      <div class="bg-white rounded-xl border">
-        <div class="p-4 border-b font-semibold">Bot List</div>
-        <div class="p-4 border-b flex justify-between">
-          <span>选品Bot</span>
-          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+
+      <!-- Bots -->
+      <div id="page-bots" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">Bot 管理</h1>
+        <div class="bg-white rounded-xl border">
+          <div class="p-4 border-b flex justify-between items-center">
+            <span class="font-semibold">Bot 列表</span>
+            <button class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm">+ 新建 Bot</button>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">🤖</div><div><p class="font-medium">选品Bot</p><p class="text-gray-500 text-sm">selectors</p></div></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">📢</div><div><p class="font-medium">投放Bot</p><p class="text-gray-500 text-sm">ads</p></div></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <div class="flex items-center gap-3"><div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">📝</div><div><p class="font-medium">运营Bot</p><p class="text-gray-500 text-sm">ops</p></div></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+          </div>
         </div>
-        <div class="p-4 border-b flex justify-between">
-          <span>投放Bot</span>
-          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+      </div>
+
+      <!-- Skills -->
+      <div id="page-skills" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">Skills 商店</h1>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-white p-5 rounded-xl border">
+            <h3 class="font-semibold mb-2">Amazon产品分析</h3>
+            <p class="text-gray-500 text-sm mb-3">亚马逊竞品分析工具</p>
+            <button class="w-full bg-gray-100 text-gray-700 py-2 rounded-lg text-sm">安装</button>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <h3 class="font-semibold mb-2">广告优化</h3>
+            <p class="text-gray-500 text-sm mb-3">自动优化广告投放</p>
+            <button class="w-full bg-gray-100 text-gray-700 py-2 rounded-lg text-sm">安装</button>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <h3 class="font-semibold mb-2">翻译助手</h3>
+            <p class="text-gray-500 text-sm mb-3">多语言翻译</p>
+            <button class="w-full bg-gray-100 text-gray-700 py-2 rounded-lg text-sm">安装</button>
+          </div>
         </div>
-        <div class="p-4 flex justify-between">
-          <span>运营Bot</span>
-          <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Active</span>
+      </div>
+
+      <!-- Models -->
+      <div id="page-models" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">模型配置</h1>
+        <div class="bg-white rounded-xl border p-6 mb-4">
+          <h3 class="font-semibold mb-4">当前使用</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="text-sm text-gray-500 block mb-1">AI 提供商</label><select class="w-full border rounded-lg p-2"><option>OpenAI</option><option>DeepSeek</option></select></div>
+            <div><label class="text-sm text-gray-500 block mb-1">模型版本</label><select class="w-full border rounded-lg p-2"><option>gpt-4o</option><option>gpt-3.5-turbo</option></select></div>
+          </div>
+          <button class="mt-4 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm">保存配置</button>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-xl border"><h3 class="font-semibold">OpenAI</h3><p class="text-gray-500 text-sm">GPT-4, GPT-3.5</p></div>
+          <div class="bg-white p-4 rounded-xl border"><h3 class="font-semibold">DeepSeek</h3><p class="text-gray-500 text-sm">DeepSeek Chat</p></div>
+          <div class="bg-white p-4 rounded-xl border"><h3 class="font-semibold">通义千问</h3><p class="text-gray-500 text-sm">Qwen Turbo</p></div>
+        </div>
+      </div>
+
+      <!-- Triggers -->
+      <div id="page-triggers" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">触发器管理</h1>
+        <div class="bg-white rounded-xl border">
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><span class="font-medium">selectors</span><span class="text-gray-500 text-sm ml-2">Interval: 3600秒</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">运行中</span>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><span class="font-medium">ads</span><span class="text-gray-500 text-sm ml-2">Cron: 0 9 * * *</span></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">运行中</span>
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <div><span class="font-medium">ops</span><span class="text-gray-500 text-sm ml-2">Webhook: /webhook/ops</span></div>
+            <span class="bg-gray-100 text-gray-500 px-2 py-1 rounded text-xs">已停止</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Channels -->
+      <div id="page-channels" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">渠道集成</h1>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="flex items-center gap-3 mb-3"><span class="text-2xl">📱</span><h3 class="font-semibold">飞书</h3></div>
+            <p class="text-gray-500 text-sm mb-3">企业即时通讯</p>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">运行中</span>
+          </div>
+          <div class="bg-white p-5 rounded-xl border">
+            <div class="flex items-center gap-3 mb-3"><span class="text-2xl">💬</span><h3 class="font-semibold">Slack</h3></div>
+            <p class="text-gray-500 text-sm mb-3">企业协作平台</p>
+            <span class="bg-gray-100 text-gray-500 px-2 py-1 rounded text-xs">未连接</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reports -->
+      <div id="page-reports" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">数据报表</h1>
+        <div class="grid grid-cols-4 gap-4 mb-6">
+          <div class="bg-white p-5 rounded-xl border text-center"><div class="text-2xl font-bold">4</div><div class="text-gray-500 text-sm">总Bot数</div></div>
+          <div class="bg-white p-5 rounded-xl border text-center"><div class="text-2xl font-bold">1,234</div><div class="text-gray-500 text-sm">总消息数</div></div>
+          <div class="bg-white p-5 rounded-xl border text-center"><div class="text-2xl font-bold">89</div><div class="text-gray-500 text-sm">今日消息</div></div>
+          <div class="bg-white p-5 rounded-xl border text-center"><div class="text-2xl font-bold">12</div><div class="text-gray-500 text-sm">活跃用户</div></div>
+        </div>
+      </div>
+
+      <!-- Users -->
+      <div id="page-users" class="hidden">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6">用户权限</h1>
+        <div class="bg-white rounded-xl border">
+          <div class="p-4 border-b font-semibold">用户列表</div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><p class="font-medium">管理员</p><p class="text-gray-500 text-sm">admin@test.com</p></div>
+            <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">Admin</span>
+          </div>
+          <div class="p-4 border-b flex justify-between items-center">
+            <div><p class="font-medium">张三</p><p class="text-gray-500 text-sm">zhangsan@test.com</p></div>
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Editor</span>
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <div><p class="font-medium">李四</p><p class="text-gray-500 text-sm">lisi@test.com</p></div>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">Operator</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <script>
+    function showPage(pageId) {
+      // Hide all pages
+      document.querySelectorAll('[id^="page-"]').forEach(el => el.classList.add('hidden'));
+      // Show selected page
+      document.getElementById('page-' + pageId).classList.remove('hidden');
+      
+      // Update nav
+      document.querySelectorAll('nav a').forEach(el => {
+        el.classList.remove('bg-gray-900', 'text-white');
+        el.classList.add('text-gray-600', 'hover:bg-gray-100');
+      });
+      const navEl = document.getElementById('nav-' + pageId);
+      navEl.classList.add('bg-gray-900', 'text-white');
+      navEl.classList.remove('text-gray-600', 'hover:bg-gray-100');
+    }
+  </script>
 </body>
 </html>
