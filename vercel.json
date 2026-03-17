@@ -1,5 +1,3 @@
 {
-  "buildCommand": "cd admin && npm install --registry=https://registry.npmjs.org/ && npm run build",
-  "outputDirectory": "admin/dist",
-  "installCommand": "cd admin && npm install --registry=https://registry.npmjs.org/"
+  "outputDirectory": "."
 }
