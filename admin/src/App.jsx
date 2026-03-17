@@ -1,40 +1,54 @@
 import { useState } from 'react'
-import { Bot, Wrench, Clock, Workflow, Cpu, BarChart3, Users, Settings, Menu, X, Bell, Search, LogOut, Plus, ChevronRight, Activity, MessageSquare, Zap, Layers } from 'lucide-react'
+import { Bot, Wrench, Clock, Workflow, Cpu, BarChart3, Users, Settings, Menu, X, Bell, Search, LogOut, Plus, ChevronRight, Activity, MessageSquare, Zap, Layers, FileText, BookOpen } from 'lucide-react'
 import DashboardPage from '@/pages/Dashboard'
 import BotsPage from '@/pages/BotsPage'
+import TasksPage from '@/pages/TasksPage'
 import SkillsPage from '@/pages/SkillsPage'
-import ModelsPage from '@/pages/ModelsPage'
 import TriggersPage from '@/pages/TriggersPage'
 import ChannelsPage from '@/pages/ChannelsPage'
+import ModelsPage from '@/pages/ModelsPage'
 import ReportsPage from '@/pages/ReportsPage'
 import UsersPage from '@/pages/UsersPage'
+import FeedPage from '@/pages/FeedPage'
+import KnowledgePage from '@/pages/KnowledgePage'
 
 const pages = [
-  { id: 'dashboard', name: '仪表盘', icon: BarChart3 },
-  { id: 'bots', name: 'Bot管理', icon: Bot },
-  { id: 'skills', name: 'Skills商店', icon: Wrench },
+  { id: 'dashboard', name: '驾驶舱', icon: BarChart3 },
+  { id: 'bots', name: 'Agent工厂', icon: Bot },
+  { id: 'tasks', name: '任务中心', icon: FileText },
+  { id: 'skills', name: '技能市场', icon: Wrench },
   { id: 'triggers', name: '触发器', icon: Clock },
-  { id: 'channels', name: '渠道集成', icon: Workflow },
+  { id: 'feed', name: '消息流', icon: Activity },
+  { id: 'knowledge', name: '知识库', icon: BookOpen },
+  { id: 'channels', name: '渠道配置', icon: Workflow },
   { id: 'models', name: '模型配置', icon: Cpu },
-  { id: 'reports', name: '数据报表', icon: BarChart3 },
-  { id: 'users', name: '用户权限', icon: Users },
+  { id: 'reports', name: '报表中心', icon: BarChart3 },
+  { id: 'users', name: '组织管理', icon: Users },
 ]
 
 function App() {
   const [activePage, setActivePage] = useState('dashboard')
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
+  const navigateTo = (pageId) => {
+    setActivePage(pageId)
+    setSidebarOpen(false)
+  }
+
   const renderPage = () => {
     switch (activePage) {
-      case 'dashboard': return <DashboardPage />
+      case 'dashboard': return <DashboardPage onNavigate={navigateTo} />
       case 'bots': return <BotsPage />
+      case 'tasks': return <TasksPage />
       case 'skills': return <SkillsPage />
-      case 'models': return <ModelsPage />
       case 'triggers': return <TriggersPage />
+      case 'feed': return <FeedPage />
+      case 'knowledge': return <KnowledgePage />
       case 'channels': return <ChannelsPage />
+      case 'models': return <ModelsPage />
       case 'reports': return <ReportsPage />
       case 'users': return <UsersPage />
-      default: return <DashboardPage />
+      default: return <DashboardPage onNavigate={navigateTo} />
     }
   }
 
@@ -72,7 +86,7 @@ function App() {
           {pages.map((page) => (
             <button
               key={page.id}
-              onClick={() => { setActivePage(page.id); setSidebarOpen(false) }}
+              onClick={() => navigateTo(page.id)}
               className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 activePage === page.id
                   ? 'bg-slate-900 text-white'
